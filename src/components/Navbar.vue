@@ -6,32 +6,35 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                    <a class="nav-link active" href="#">Find a Locker</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link active" href="#" >Size Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" >Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" >Help Center</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <ul class="d-flex navbar-nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link active">My Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link active">080-188-0872</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </li>
+
+            </ul>
             </div>
         </div>
     </nav>
