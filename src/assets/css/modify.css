@@ -1,6 +1,14 @@
+*{
+    box-sizing: border-box;
+    outline: none !important;
+}
 .bg-yellow{
     background: #D7B343;
 }
 .nav-item{
     padding: 10px 15px;
+}
+
+.hero{
+    height: 500px;
 }

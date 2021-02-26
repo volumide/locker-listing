@@ -33,7 +33,6 @@
                 <li class="nav-item">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </li>
-
             </ul>
             </div>
         </div>
