@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-yellow">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">
+        <img :src="logo" style="width: 100px" />
+      </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -52,3 +54,21 @@
     </div>
   </nav>
 </template>
+
+<script>
+import logo from "../assets/logo.png";
+
+export default {
+  data() {
+    return {
+      logo: logo,
+    };
+  },
+};
+</script>
+
+<style scoped>
+a {
+  font-weight: 600;
+}
+</style>

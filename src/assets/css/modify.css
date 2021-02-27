@@ -1,3 +1,6 @@
+*{
+    font-weight: 500;
+}
 .container-fluid{
   overflow-x: hidden;
 }
@@ -14,4 +17,7 @@
     background-image: url('https://www.nuesmart.com/wp-content/uploads/2020/06/lockers-with-NS1000-smart-locks-2.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.btn-danger{
+    background: #DE4C35;
 }

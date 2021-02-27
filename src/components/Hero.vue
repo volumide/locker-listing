@@ -3,19 +3,27 @@
     <!-- hero section -->
     <div class="text-white py-5 px-3 hero bg-dark corousel">
       <h1>Find a Locker</h1>
-      <div class="d-flex jsutify-content-center align-items-center px-1 py-1">
-        <div class="form-group">
-          <input
-            v-model="word"
-            @input="changeText"
-            type="text"
-            class="form-control rounded-0"
-            name=""
-            id=""
-            placeholder=""
-          />
+      <div style="width: 50%">
+        <div
+          class="d-flex align-items-center px-4 py-3"
+          style="background: rgba(255, 255, 255, 0.8)"
+        >
+          <div class="form-group" style="flex: 2">
+            <input
+              v-model="word"
+              @input="changeText"
+              type="text"
+              class="form-control rounded-0 border-0 bg-transparent"
+              name=""
+              id=""
+              placeholder="Enter City or State"
+            />
+          </div>
+          <button type="button" class="btn btn-danger rounded-0" style="flex: 1">
+            <p>Find Locker</p>
+            <small>One Naira For First Rent</small>
+          </button>
         </div>
-        <button type="button" class="btn btn-primary rounded-0">Find Locker</button>
       </div>
     </div>
 
@@ -27,12 +35,14 @@
         {{ location.length }} loker(s) available <span v-if="word"> in {{ word }} </span>
       </p>
       <div>
-        <label for="options" class="pe-3">Sort By</label>
-        <select name="" id="options" class="form-select">
-          <option value=""></option>
-          <option value="lowest">Lowest</option>
-          <option value="closest">Closest</option>
-        </select>
+        <div class="d-flex">
+          <label for="options" class="pe-3">Sort By</label>
+          <select name="" id="options" class="form-select">
+            <option value=""></option>
+            <option value="lowest">Lowest</option>
+            <option value="closest">Closest</option>
+          </select>
+        </div>
         <a href="#">view guide size</a>
       </div>
     </div>
@@ -47,11 +57,11 @@
             alt="..."
           />
           <div class="card-body">
-            <p class="card-title">22A Adelolu Odeku Street, VI, Lagos</p>
+            <p class="card-title text-primary">22A Adelolu Odeku Street, VI, Lagos</p>
             <h2 class="card-text">
               <span v-for="(i, index) in 5" :key="index">&#8902;</span>
             </h2>
-            <a href="#" class="btn btn-primary">0.3 Miles Away</a>
+            <p class="text-primary">0.3 Miles Away</p>
           </div>
         </div>
       </div>
@@ -124,3 +134,31 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.btn-success {
+  color: #6ac172;
+  color: #fff;
+}
+button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+button small {
+  padding: 2px;
+  display: block;
+  background: #fff;
+  color: #de4c35;
+}
+.card h2 {
+  color: #de4c35;
+}
+</style>
