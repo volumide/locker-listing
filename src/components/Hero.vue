@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid px-0">
     <!-- hero section -->
-    <div class="text-white py-5 px-3 hero bg-dark">
+    <div class="text-white py-5 px-3 hero bg-dark corousel">
       <h1>Find a Locker</h1>
       <div class="d-flex jsutify-content-center align-items-center px-1 py-1">
         <div class="form-group">
@@ -12,7 +12,6 @@
             class="form-control rounded-0"
             name=""
             id=""
-            aria-describedby="helpId"
             placeholder=""
           />
         </div>

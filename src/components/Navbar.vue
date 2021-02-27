@@ -40,8 +40,8 @@
           </li>
           <li class="nav-item">
             <button
-              class="btn btn-outline-success"
-              style="border-radius: 50px"
+              class="btn text-white"
+              style="border-radius: 50px; background-color: #ad9e4b"
               type="submit"
             >
               Pay your bill
