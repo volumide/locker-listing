@@ -24,7 +24,9 @@
     <div
       class="locker-info bg-light py-3 px-3 d-flex justify-content-between align-items-center"
     >
-      <p>{{ lockers.length }} lokers available</p>
+      <p>
+        {{ location.length }} loker(s) available <span v-if="word"> in {{ word }} </span>
+      </p>
       <div>
         <label for="options" class="pe-3">Sort By</label>
         <select name="" id="options" class="form-select">
@@ -40,10 +42,16 @@
     <div class="row py-3 px-3">
       <div class="col-md-2">
         <div class="card" style="width: 100%">
-          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <img
+            src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-92060,resizemode-1,msid-69384055/wealth/save/how-nominee-can-access-safe-deposit-locker-in-bank.jpg"
+            class="card-img-top"
+            alt="..."
+          />
           <div class="card-body">
             <p class="card-title">22A Adelolu Odeku Street, VI, Lagos</p>
-            <h2 class="card-text">&#8902;</h2>
+            <h2 class="card-text">
+              <span v-for="(i, index) in 5" :key="index">&#8902;</span>
+            </h2>
             <a href="#" class="btn btn-primary">0.3 Miles Away</a>
           </div>
         </div>
@@ -64,7 +72,11 @@
                 <td>{{ locker.name }}</td>
                 <td>{{ locker.description }}</td>
                 <td>{{ locker.price }}</td>
-                <td><button class="btn btn-primary rounded-0">Rent</button></td>
+                <td>
+                  <router-link to="/rent" class="btn btn-success rounded-0">
+                    Rent
+                  </router-link>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -88,7 +100,7 @@ export default {
     filter(wordToMatch, locker) {
       return locker.filter((locker) => {
         const regex = new RegExp(wordToMatch, "gi");
-        return locker.location.match(regex);
+        return locker.location.match(regex) || locker.city.match(regex);
       });
     },
 
