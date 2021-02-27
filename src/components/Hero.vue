@@ -24,7 +24,7 @@
     <div
       class="locker-info bg-light py-3 px-3 d-flex justify-content-between align-items-center"
     >
-      <p>6 opens lokers available</p>
+      <p>{{ lockers.length }} lokers available</p>
       <div>
         <label for="options" class="pe-3">Sort By</label>
         <select name="" id="options" class="form-select">
@@ -60,10 +60,11 @@
         <div>
           <table class="table table-striped mt-3">
             <tbody>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+              <tr v-for="locker in location" :key="locker.id">
+                <td>{{ locker.name }}</td>
+                <td>{{ locker.description }}</td>
+                <td>{{ locker.price }}</td>
+                <td><button class="btn btn-primary rounded-0">Rent</button></td>
               </tr>
             </tbody>
           </table>
@@ -79,6 +80,7 @@ export default {
   data() {
     return {
       lockers: [],
+      location: [],
       word: "",
     };
   },
@@ -96,12 +98,14 @@ export default {
       });
       let responds = await locker.json();
       this.lockers = [...responds];
-      console.log(this.lockers);
+      this.location = this.lockers;
     },
 
     changeText() {
       let value = this.filter(this.word, this.lockers);
-      console.log(value);
+      value.map((r) => r);
+      this.location = value;
+      console.log(value.length);
     },
   },
   async mounted() {
