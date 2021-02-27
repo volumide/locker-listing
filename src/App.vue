@@ -1,25 +1,26 @@
 <template>
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <NavBar />
-    <Hero />
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <NavBar />
+  <router-view />
+  <!-- <Hero /> -->
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 </template>
 
 <script>
-import NavBar from './components/Navbar.vue'
-import Hero from './components/Hero.vue'
+import NavBar from "./components/Navbar.vue";
+// import Hero from './components/Hero.vue'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     NavBar,
-    Hero
-  }
-}
+    // Hero
+  },
+};
 </script>
 
 <style>
-    /* #app {
+/* #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
