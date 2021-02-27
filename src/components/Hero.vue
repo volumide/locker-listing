@@ -6,6 +6,8 @@
       <div class="d-flex jsutify-content-center align-items-center px-1 py-1">
         <div class="form-group">
           <input
+            v-model="word"
+            @input="changeText"
             type="text"
             class="form-control rounded-0"
             name=""
@@ -74,14 +76,32 @@
 
 <script>
 export default {
+  data() {
+    return {
+      lockers: [],
+      word: "",
+    };
+  },
   methods: {
-    async getLocker() {
-      let lockers = await fetch("http://localhost:8100/find", {
-        method: "get",
-        // "Content-Type": "application/json",
+    filter(wordToMatch, locker) {
+      return locker.filter((locker) => {
+        const regex = new RegExp(wordToMatch, "gi");
+        return locker.location.match(regex);
       });
-      let responds = await lockers.json();
-      console.log(responds);
+    },
+
+    async getLocker() {
+      let locker = await fetch("http://localhost:8100/find", {
+        method: "get",
+      });
+      let responds = await locker.json();
+      this.lockers = [...responds];
+      console.log(this.lockers);
+    },
+
+    changeText() {
+      let value = this.filter(this.word, this.lockers);
+      console.log(value);
     },
   },
   async mounted() {
