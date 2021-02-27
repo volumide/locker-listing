@@ -1,7 +1,7 @@
-*{
-    box-sizing: border-box;
-    outline: none !important;
+.container-fluid{
+  overflow-x: hidden;
 }
+
 .bg-yellow{
     background: #D7B343;
 }
