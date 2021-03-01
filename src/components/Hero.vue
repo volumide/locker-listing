@@ -66,8 +66,8 @@
         </div>
       </div>
       <div class="col-md-10">
-        <div>
-          <select class="form-select d-inline">
+        <div style="width: 30%">
+          <select class="form-select">
             <option value="" selected>Featured</option>
             <option value="">Small</option>
             <option value="">Medium</option>
